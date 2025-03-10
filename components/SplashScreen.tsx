@@ -15,7 +15,10 @@ export default function SplashScreenComponent() {
 
   return (
     <View style={styles.container}>
-      <Image source={require("../assets/splash.png")} style={styles.logo} />
+      <Image
+        source={require("../assets/splash-icon.png")}
+        style={styles.logo}
+      />
       <Text style={styles.title}>Uygulama İsmi</Text>
     </View>
   );
