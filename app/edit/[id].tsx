@@ -74,6 +74,7 @@ export default function EditScreen() {
         onPress={handleUpdate}
         style={styles.button}
       />
+
     </ThemedContainer>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { View, Image, StyleSheet, Text } from "react-native";
+import { View, ImageBackground, StyleSheet, Text } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
 
 SplashScreen.preventAutoHideAsync();
@@ -14,32 +14,29 @@ export default function SplashScreenComponent() {
   }, []);
 
   return (
-    <View style={styles.container}>
-      <Image
-        source={require("../assets/splash-icon.png")}
-        style={styles.logo}
-      />
+    <ImageBackground
+      source={require("../assets/images/splash-icon.png")}
+      style={styles.container}
+      resizeMode="cover"
+    >
       <Text style={styles.title}>Uygulama İsmi</Text>
-    </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1, // Ekranı tamamen kaplar
     backgroundColor: "#ffffff",
     justifyContent: "center",
     alignItems: "center",
   },
-  logo: {
-    width: 200,
-    height: 200,
-    resizeMode: "contain",
-  },
   title: {
-    fontSize: 24,
+    fontSize: 32,
     fontWeight: "bold",
-    marginTop: 20,
-    color: "#111827",
+    color: "#ffffff",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 10,
   },
 });

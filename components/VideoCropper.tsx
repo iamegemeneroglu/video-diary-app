@@ -19,9 +19,9 @@ interface VideoCropperProps {
 }
 
 const segmentLength = 5;
-const cropBoxWidth = 200; 
-const thumbnailWidth = 80; 
-const gap = 0; 
+const cropBoxWidth = 200;
+const thumbnailWidth = 80;
+const gap = 0;
 
 export default function VideoCropper({ videoUri, onCrop }: VideoCropperProps) {
   const [duration, setDuration] = useState(0);
@@ -33,7 +33,6 @@ export default function VideoCropper({ videoUri, onCrop }: VideoCropperProps) {
 
   const videoRef = useRef<Video>(null);
 
-  
   const contentWidth = thumbnails.length * (thumbnailWidth + gap);
 
   const handleLoad = (status: AVPlaybackStatus) => {
@@ -168,7 +167,7 @@ export default function VideoCropper({ videoUri, onCrop }: VideoCropperProps) {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 10 },
+  container: { paddingHorizontal: 10 },
   video: {
     width: "100%",
     height: "75%",
